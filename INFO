@@ -1,0 +1,17 @@
+RULE SYNTAX:
+target: dependencies 
+	<command>; \
+	<command>; \
+        ...
+
+$@ -> target of the current rule
+$^, $< -> dependencies of the current rule
+make -p -f /dev/null - > show all implicit rules and variables
+
+objects = $(sources: .c=.o) -> files with names of $(sources) 
+                               and .o extension instead of .c
+
+$(CC) -> cc (gcc, c compiler)
+$(CXX) -> g++ (C++ compiler)
+
+
