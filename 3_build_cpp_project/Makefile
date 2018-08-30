@@ -29,4 +29,7 @@ $(BIN): $(OBJECTS)
 
 clean: 
 	rm -f *.o
-  
+
+build:
+	$(MAKE) clean
+	$(MAKE)

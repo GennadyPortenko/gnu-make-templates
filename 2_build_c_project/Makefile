@@ -27,6 +27,9 @@ $(BIN): $(OBJECTS)
 %.o: %.c
 	$(CC) -c $(CFLAGS) $^ -o $@
 
-clean: 
+clean:
 	rm -f *.o
-  
+
+build:
+	$(MAKE) clean
+	$(MAKE)

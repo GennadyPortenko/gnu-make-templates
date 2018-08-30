@@ -13,5 +13,6 @@ objects = $(sources: .c=.o) -> files with names of $(sources)
 
 $(CC) -> cc (gcc, c compiler)
 $(CXX) -> g++ (C++ compiler)
+$(MAKE) -> make
 
 
