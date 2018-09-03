@@ -24,8 +24,10 @@ all: $(BIN)
 $(BIN): $(OBJECTS)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
-%.o: %.c
-	$(CC) -c $(CFLAGS) $^ -o $@
+# %.o: %.c
+	# $(CC) -c $(CFLAGS) $^ -o $@
+$(OBJECTS): $(SOURCES)
+	$(foreach var, $(SOURCES), $(CC) -c $(CFLAGS) $(var) -o $(var:.c=.o);)
 
 clean:
 	rm -f *.o
